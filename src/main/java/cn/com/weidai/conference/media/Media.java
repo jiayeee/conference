@@ -19,7 +19,6 @@ public class Media {
 
     public static void wsExe(Client client, final String req) {
         try {
-
             if (!Cache.ROOM_CHANNEL_GROUP.containsKey(client.getRoomId())) {
                 return;
             }

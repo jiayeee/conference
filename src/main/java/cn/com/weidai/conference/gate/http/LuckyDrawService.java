@@ -1,4 +1,4 @@
-package cn.com.weidai.conference.service.http;
+package cn.com.weidai.conference.gate.http;
 
 import cn.com.weidai.conference.media.*;
 import cn.com.weidai.conference.schedule.Schedule;

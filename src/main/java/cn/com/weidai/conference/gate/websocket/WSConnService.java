@@ -1,4 +1,4 @@
-package cn.com.weidai.conference.service.websocket;
+package cn.com.weidai.conference.gate.websocket;
 
 import cn.com.weidai.conference.media.Domain;
 import cn.com.weidai.conference.entity.Client;
@@ -9,7 +9,7 @@ import org.apache.commons.lang3.StringUtils;
 /**
  * WebSocket连接
  */
-public class WSConnRequestService {
+public class WSConnService {
 
     /**
      * 根据客户端的请求生成 Client

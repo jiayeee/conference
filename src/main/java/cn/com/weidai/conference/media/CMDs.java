@@ -16,5 +16,6 @@ public class CMDs {
     public static final int CMD_WS_THUMBS_UP    = 3;
     // 抽奖
     public static final int CMD_HTTP_LUCKY_DRAW = 4;
+
     public static final int CMD_WS_LUCKY_DRAW   = 5;
 }

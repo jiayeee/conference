@@ -1,4 +1,4 @@
-package cn.com.weidai.conference.service.websocket;
+package cn.com.weidai.conference.gate.websocket;
 
 import cn.com.weidai.conference.media.CMDs;
 import cn.com.weidai.conference.media.Domain;

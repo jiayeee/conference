@@ -2,15 +2,13 @@ package cn.com.weidai.conference;
 
 import cn.com.weidai.conference.media.*;
 import cn.com.weidai.conference.entity.Client;
-import cn.com.weidai.conference.service.websocket.WSConnRequestService;
+import cn.com.weidai.conference.gate.websocket.WSConnService;
 import com.alibaba.fastjson.JSON;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.*;
-import io.netty.channel.group.DefaultChannelGroup;
 import io.netty.handler.codec.http.*;
 import io.netty.handler.codec.http.websocketx.*;
-import io.netty.util.concurrent.GlobalEventExecutor;
 
 import java.util.List;
 import java.util.Map;
@@ -114,7 +112,7 @@ public class WebSocketServerHandler extends SimpleChannelInboundHandler<Object> 
             return;
         }
 
-        client = WSConnRequestService.clientRegister(parameters.get(HTTP_REQUEST_STRING).get(0));
+        client = WSConnService.clientRegister(parameters.get(HTTP_REQUEST_STRING).get(0));
         if (client.getRoomId() == null) {
             System.err.printf("房间号不可缺省");
             sendHttpResponse(ctx, req, new DefaultFullHttpResponse(HTTP_1_1, NOT_FOUND));
