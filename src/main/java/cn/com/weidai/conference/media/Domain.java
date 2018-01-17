@@ -66,7 +66,7 @@ public class Domain {
     @Setter
     public static class BarrageResp implements Serializable {
 
-        private final int cmd = CMDs.CMD_WS_BARRAGE;
+        private final int cmd = Cmds.CMD_WS_BARRAGE;
         private Long      uid;
         private String    avatar;                   // 头像
         private String    message;                  // 弹幕内容
@@ -90,7 +90,7 @@ public class Domain {
     @Setter
     public static class ThumbsUpResp implements Serializable {
 
-        private final int cmd      = CMDs.CMD_WS_THUMBS_UP;
+        private final int cmd      = Cmds.CMD_WS_THUMBS_UP;
         private Long      uid;
         private String    avatar;                          // 头像
         private int       progress = 0;                    // 进度
@@ -116,7 +116,7 @@ public class Domain {
     @Setter
     public static class LuckyDrawResp implements Serializable {
 
-        private final int cmd  = CMDs.CMD_WS_LUCKY_DRAW;
+        private final int cmd  = Cmds.CMD_WS_LUCKY_DRAW;
         private Long      uid;
         private String    avatar;                       // 头像
         private boolean   flag = false;                 // 是否中奖

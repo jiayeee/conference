@@ -1,6 +1,6 @@
 package cn.com.weidai.conference.schedule;
 
-import cn.com.weidai.conference.media.CMDs;
+import cn.com.weidai.conference.media.Cmds;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.stereotype.Repository;
 
@@ -45,7 +45,7 @@ public class Schedule implements InitializingBean {
                         Task task = queue.take();
                         int cmd = task.getCmd();
                         switch (cmd) {
-                            case CMDs.CMD_HTTP_LUCKY_DRAW:
+                            case Cmds.CMD_HTTP_LUCKY_DRAW:
                                 threadPool.submit(new LuckDrawBiz(task));
                                 break;
                             default:

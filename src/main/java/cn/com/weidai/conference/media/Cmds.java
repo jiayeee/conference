@@ -5,7 +5,7 @@ package cn.com.weidai.conference.media;
  * 
  * Created by lwz on 2018/01/14 18:19.
  */
-public class CMDs {
+public class Cmds {
 
     // 登录
     public static final int CMD_HTTP_LOGIN      = 1;

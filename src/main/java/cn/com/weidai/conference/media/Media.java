@@ -7,7 +7,6 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import io.netty.channel.group.ChannelGroup;
 import io.netty.handler.codec.http.websocketx.TextWebSocketFrame;
-import io.netty.util.CharsetUtil;
 import org.apache.commons.codec.binary.Base64;
 
 import java.util.Map;
@@ -39,13 +38,13 @@ public class Media {
 
             Integer cmd = jsonObject.getInteger("cmd");
             switch (cmd) {
-                case CMDs.CMD_WS_BARRAGE:
+                case Cmds.CMD_WS_BARRAGE:
                     channels.writeAndFlush(new TextWebSocketFrame(resp));
                     break;
-                case CMDs.CMD_WS_THUMBS_UP:
+                case Cmds.CMD_WS_THUMBS_UP:
                     channels.writeAndFlush(new TextWebSocketFrame(resp));
                     break;
-                case CMDs.CMD_WS_LUCKY_DRAW:
+                case Cmds.CMD_WS_LUCKY_DRAW:
                     break;
                 default:
                     break;

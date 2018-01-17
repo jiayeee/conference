@@ -1,6 +1,5 @@
 package cn.com.weidai.conference.schedule;
 
-import cn.com.weidai.conference.media.CMDs;
 import lombok.Getter;
 import lombok.Setter;
 

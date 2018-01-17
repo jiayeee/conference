@@ -15,8 +15,8 @@ public class LuckyDrawService {
     @Autowired
     private Schedule schedule;
 
-    @Remote(cmd = CMDs.CMD_HTTP_LUCKY_DRAW, ws = false, needsLogin = true)
+    @Remote(cmd = Cmds.CMD_HTTP_LUCKY_DRAW, ws = false, needsLogin = true)
     public void luckDraw(Domain.HttpLuckyDrawReq httpLuckyDrawReq) {
-        schedule.addTask(new Task(CMDs.CMD_HTTP_LUCKY_DRAW, httpLuckyDrawReq.getRoomId()));
+        schedule.addTask(new Task(Cmds.CMD_HTTP_LUCKY_DRAW, httpLuckyDrawReq.getRoomId()));
     }
 }

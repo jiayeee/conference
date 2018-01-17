@@ -1,6 +1,6 @@
 package cn.com.weidai.conference.gate.http;
 
-import cn.com.weidai.conference.media.CMDs;
+import cn.com.weidai.conference.media.Cmds;
 import cn.com.weidai.conference.media.Domain;
 import cn.com.weidai.conference.media.Remote;
 import org.springframework.stereotype.Service;
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class LoginService {
 
-    @Remote(cmd = CMDs.CMD_HTTP_LOGIN, ws = false, needsLogin = false)
+    @Remote(cmd = Cmds.CMD_HTTP_LOGIN, ws = false, needsLogin = false)
     public Domain.HttpLoginResp doLogin(Domain.HttpLoginReq httpLoginReq) {
 
         System.out.println("");
